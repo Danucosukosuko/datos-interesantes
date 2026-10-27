@@ -10,6 +10,7 @@ Datos verificados:
 """
 import math
 from engine import gfx
+from engine.outro import s_outro, outro_sfx
 from engine.gfx import ORANGE, AMBER, DIM, DARK, PANEL, RED, HOT, BG, TRACE
 
 TITLE = "¿Cómo funciona el WiFi?"
@@ -253,22 +254,6 @@ def s_record(c, l, d, b, h):
         c.text("*TEÓRICO", 90, 76, RED, 2, "center")
 
 
-def s_outro(c, l, d, b, h):
-    for k, (txt, y) in enumerate([("¡SÍGUEME", 56), ("PARA MÁS!", 96)]):
-        st = 2 + k
-        if l >= st:
-            p = gfx.ease_out_back((l - st) * 2.5, 2.4)
-            c.text(txt, 90, gfx.lerp(-40, y, p), AMBER if k == 0 else ORANGE, 3, "center")
-    if l >= 4:
-        c.text("DATOS CURIOSOS", 90, 142, ORANGE, 2, "center")
-    if l >= 5:
-        pulse = math.exp(-(b % 1) * 4)
-        wifi_icon(c, 70, 215, 3, pulse)
-        heart = [".##.##.", "#######", "#######", ".#####.", "..###..", "...#..."]
-        s = 3 + (1 if pulse > 0.6 else 0)
-        c.sprite(heart, 110, 180, {"#": RED}, s)
-
-
 SCENES = [
     (0, 8, None, s_title, False),
     (8, 24, "1 ROUTER", s_router, True),
@@ -302,7 +287,7 @@ SUBS = [
 SFX = (
     [(0, "blip_up"), (1, "blip_up"), (2, "blip_up"), (3, "power_up"),
      (4, "ding"), (5, "ding"), (6, "ding")]
-    + [(s, "whoosh") for s in (8, 24, 38, 52, 66, 80, 100, 116)]
+    + [(s, "whoosh") for s in (8, 24, 38, 52, 66, 80, 100)]
     + [(9, "power_up")] + [(b, "bits") for b in (10, 12, 14)]
     + [(16, "sweep_up"), (18, "ping"), (20, "ping"), (22, "ping")]
     + [(24 + k, "tick") for k in range(1, 8)] + [(32, "power_up")]
@@ -312,5 +297,5 @@ SFX = (
     + [(67, "ping"), (69, "ping"), (71, "ping"), (73, "bits"), (75, "bits"), (77, "power_up")]
     + [(81, "sweep_up"), (86, "sweep_fast"), (87, "sweep_fast"), (92, "thud"), (94, "power_down"), (96, "power_down")]
     + [(101, "sweep_up"), (105, "power_up"), (108, "error")]
-    + [(118, "blip_up"), (119, "blip_up"), (120, "blip"), (121, "power_up"), (124, "ding"), (126, "end")]
+    + outro_sfx(116)
 )
