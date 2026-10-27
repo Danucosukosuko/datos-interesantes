@@ -18,6 +18,7 @@ def main():
     ap.add_argument("--preview")
     ap.add_argument("--render")
     ap.add_argument("--beats", default="")
+    ap.add_argument("--cover")
     a = ap.parse_args()
     T = importlib.import_module(f"topics.{a.topic}")
     v = Video(T)
@@ -31,6 +32,10 @@ def main():
                 beats += [s + 0.6, (s + e) / 2, e - 1.0]
         os.makedirs(os.path.dirname(a.preview) or ".", exist_ok=True)
         print(v.preview(a.preview, beats))
+    if a.cover:
+        from engine.cover import render_cover
+        os.makedirs(os.path.dirname(a.cover) or ".", exist_ok=True)
+        print(render_cover(T, a.cover))
     if a.render:
         os.makedirs(os.path.dirname(a.render) or ".", exist_ok=True)
         wav = os.path.splitext(a.render)[0] + ".wav"

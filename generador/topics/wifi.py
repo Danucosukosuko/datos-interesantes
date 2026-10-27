@@ -254,6 +254,16 @@ def s_record(c, l, d, b, h):
         c.text("*TEÓRICO", 90, 76, RED, 2, "center")
 
 
+COVER_LINES = ["¿CÓMO", "FUNCIONA", "EL WIFI?"]
+
+
+def cover_art(c, y):
+    cx, cy = 90, y + 66
+    for k in range(4):
+        c.ring(cx, cy, 10 + k * 13, 7, AMBER if k < 3 else ORANGE, a0=-135, a1=-45)
+    c.disc(cx, cy, 6, AMBER)
+
+
 SCENES = [
     (0, 8, None, s_title, False),
     (8, 24, "1 ROUTER", s_router, True),
