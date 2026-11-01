@@ -3,22 +3,30 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas
+## Vídeos y métricas (actualizado 2026-11-01)
 
 | Fecha | Tema | Categoría | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | Retención | View rate (>3 s) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | 184 | 157 | 10 | 0 | 2 | 1 | 10,3 | n/d | 41,8 % |
-| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | — | — | — | — | — | — | — | — | — (programado 17:00, sin datos aún) |
+| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | 199 | 161 | 10 | 0 | 4 | 1 | 11,8 | n/d | 41,7 % |
+| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | 175 | 150 | 4 | 2 | 0 | 0 | 9,2 | n/d | 34,0 % |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | — | — | — | — | — | — | — | — | — (programado 18:00, sin datos aún) |
 
-Media del canal (1 vídeo): 184 views · 157 alcance · (guardados+compartidos)/alcance = 1,9 % · view rate 41,8 % · 10,3 s de 60 s vistos de media.
+Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)/alcance = 1,6 % · view rate 37,9 % · 10,5 s de 60 s vistos de media. Metricool no devuelve retención (IGRE27) para esta cuenta.
 
 ## Ranking de categorías
 
-| Categoría | Vídeos | View rate medio | Retención media | (Guard.+Comp.)/alcance |
+| Categoría | Vídeos | View rate medio | T. medio | (Guard.+Comp.)/alcance |
 |---|---|---|---|---|
-| tecnología | 1 | 41,8 % | n/d | 1,9 % |
+| tecnología | 2 | 37,9 % | 10,5 s | 1,6 % |
 
 ## Conclusiones y decisiones
+
+### 2026-11-01
+- 2 vídeos con datos (menos de 4): solo anotaciones, sin conclusiones fuertes.
+- El WiFi rindió por debajo del ordenador en todo: view rate 34,0 % vs 41,7 %, 9,2 s vs 11,8 s de visionado medio, 0 guardados/compartidos vs 5. Solo tuvo más comentarios (2). Con una sola categoría probada aún no se puede comparar entre categorías.
+- El problema principal sigue siendo el arranque: ~6 de cada 10 personas se van antes de 3 s y de media se ven ~10 s. Se mantiene la decisión de gancho en los 2 primeros segundos (ya aplicada en el vídeo de internet de hoy); su view rate dirá si funciona.
+- Planificación: el vídeo de hoy (internet, 18:00) es el 3.º de tecnología seguido; el próximo será OBLIGATORIAMENTE de otra categoría. Primer candidato: «¿Por qué el cielo es azul?» (física), así además se prueba una categoría nueva frente a tecnología.
+- Hoy ya hay publicación programada → no se genera vídeo nuevo.
 
 ### 2026-10-28
 - Solo hay 1 vídeo con datos (menos de 4): se anota, sin conclusiones fuertes.
