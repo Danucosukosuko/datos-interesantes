@@ -18,6 +18,38 @@ BASE_TEMPO = 1.0
 MAX_TEMPO = 1.4
 GAP = 0.15            # silencio mínimo entre frases (s)
 DEFAULT_VOICE_ID = "PThYvS2VYRNVjFOlodls"   # voz de España elegida por Pablo (2-nov-2026)
+# Registro de créditos gastados en ElevenLabs (1 crédito por carácter enviado, etiquetas incluidas).
+LEDGER = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "creditos_voz.csv")
+MONTH_BUDGET = 9500   # plan gratis: 10.000/mes; 500 de margen
+
+
+def _log_credits(n, note=""):
+    import datetime
+    new = not os.path.exists(LEDGER)
+    with open(LEDGER, "a") as f:
+        if new:
+            f.write("fecha,creditos,nota\n")
+        f.write(f"{datetime.date.today().isoformat()},{n},{note}\n")
+
+
+def month_used(month=None):
+    """Créditos de ElevenLabs gastados en el mes (AAAA-MM; por defecto, el actual)."""
+    import datetime
+    month = month or datetime.date.today().isoformat()[:7]
+    if not os.path.exists(LEDGER):
+        return 0
+    total = 0
+    with open(LEDGER) as f:
+        next(f, None)
+        for line in f:
+            parts = line.strip().split(",", 2)
+            if len(parts) >= 2 and parts[0].startswith(month):
+                total += int(parts[1])
+    return total
+
+
+def budget_left():
+    return MONTH_BUDGET - month_used()
 
 
 def _pico(text, path):
@@ -45,7 +77,9 @@ def _request(text, endpoint, prev=None, nxt=None):
         data=json.dumps(body).encode(), method="POST",
         headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=180) as r:
-        return r.read()
+        data = r.read()
+    _log_credits(len(text), text[:40].replace(",", " "))
+    return data
 
 
 def _eleven(text, path, prev=None, nxt=None):
