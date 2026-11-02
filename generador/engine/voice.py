@@ -1,8 +1,8 @@
 """Voz en off opcional (español de España).
 Un tema la activa definiendo VOICE = [(beat, "frase"), ...]. Cada frase se acelera
 lo justo para terminar antes de la siguiente (máx. x1,4).
-Motor: ElevenLabs si hay ELEVENLABS_API_KEY y ELEVENLABS_VOICE_ID en el entorno;
-si no, SVOX Pico (`pico2wave -l es-ES`, calidad baja: solo para pruebas)."""
+Motor: ElevenLabs si hay ELEVENLABS_API_KEY en el entorno (voz elegida por Pablo,
+cambiable con ELEVENLABS_VOICE_ID); si no, SVOX Pico (`pico2wave -l es-ES`, calidad baja: solo para pruebas)."""
 import json
 import os
 import subprocess
@@ -15,6 +15,7 @@ from . import audio
 BASE_TEMPO = 1.0
 MAX_TEMPO = 1.4
 GAP = 0.15            # silencio mínimo entre frases (s)
+DEFAULT_VOICE_ID = "PThYvS2VYRNVjFOlodls"   # voz de España elegida por Pablo (2-nov-2026)
 
 
 def _pico(text, path):
@@ -22,12 +23,12 @@ def _pico(text, path):
 
 
 def available():
-    return bool(os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"))
+    return bool(os.environ.get("ELEVENLABS_API_KEY"))
 
 
 def _eleven(text, path, prev=None, nxt=None):
     """Sintetiza con ElevenLabs (modelo multilingüe) y guarda un mp3."""
-    vid = os.environ["ELEVENLABS_VOICE_ID"]
+    vid = os.environ.get("ELEVENLABS_VOICE_ID") or DEFAULT_VOICE_ID
     body = {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
             "language_code": "es",
             "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True}}
