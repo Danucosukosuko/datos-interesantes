@@ -166,7 +166,8 @@ class Video:
         return path
 
     def render(self, out_mp4, wav_path):
-        audio.render(self.sfx, wav_path, getattr(self.T, "MUSIC_SEED", 1), getattr(self.T, "MUSIC_KEY", 57))
+        audio.render(self.sfx, wav_path, getattr(self.T, "MUSIC_SEED", 1), getattr(self.T, "MUSIC_KEY", 57),
+                     getattr(self.T, "VOICE", None))
         cmd = ["ffmpeg", "-y", "-loglevel", "error",
                "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{OUT_W}x{OUT_H}", "-r", str(FPS), "-i", "-",
                "-i", wav_path,

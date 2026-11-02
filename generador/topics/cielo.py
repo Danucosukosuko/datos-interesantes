@@ -337,3 +337,16 @@ SFX = (
     + [(100.5, "thud"), (102, "blip"), (104, "ding"), (107, "power_down"), (110, "power_up")]
     + outro_sfx(116)
 )
+
+# Voz en off (prueba): frases al inicio de cada escena
+VOICE = [
+    (0, "El cielo debería ser violeta. ¿Por qué es azul?"),
+    (8, "La luz del Sol tarda ocho minutos en llegar. Parece blanca, pero lleva todos los colores."),
+    (24, "Cada color es una onda. El rojo, larga; el azul, corta; el violeta, más aún."),
+    (38, "El aire está lleno de moléculas, más de mil veces más pequeñas que esas ondas."),
+    (52, "Al chocar, las ondas cortas rebotan más. El azul, casi seis veces más que el rojo."),
+    (66, "¿Y el violeta? El Sol emite menos, parte se absorbe arriba, y tus ojos ven mejor el azul."),
+    (80, "Al atardecer, la luz cruza mucho más aire. El azul se pierde por el camino, y nos llegan rojos y naranjas."),
+    (100, "¿Y en Marte? Al revés: cielo color caramelo, y atardeceres azules."),
+    (116, "Sígueme para más datos curiosos."),
+]

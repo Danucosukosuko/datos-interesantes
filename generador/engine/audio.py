@@ -283,13 +283,20 @@ def compose(seed=1, key=57):
     return mus
 
 
-def render(sfx_list, path, seed=1, key=57):
+def render(sfx_list, path, seed=1, key=57, voice_lines=None):
     mus = compose(seed, key)
     fx = Track()
     for beat, kind in sfx_list:
         fx.add(beat, sfx(kind), SFX_GAIN.get(kind, 0.32))
-    mixd = mus * 0.8 + fx.buf
-    mixd = np.tanh(mixd * 1.1)
+    if voice_lines:
+        from . import voice
+        v = voice.track(voice_lines)
+        g = voice.duck_envelope(v)
+        bed = np.tanh((mus[:TOTAL] * 0.8 * g + fx.buf[:TOTAL] * (0.5 + 0.5 * g)) * 1.1)
+        bed *= 0.55 / max(1e-6, np.abs(bed).max())
+        mixd = bed + v * (0.85 / max(1e-6, np.abs(v).max()))
+    else:
+        mixd = np.tanh((mus * 0.8 + fx.buf) * 1.1)
     mixd = mixd[:TOTAL]
     mixd *= 0.89 / max(1e-6, np.abs(mixd).max())
     st = np.stack([mixd, mixd], 1)
