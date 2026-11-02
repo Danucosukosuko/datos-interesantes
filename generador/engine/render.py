@@ -52,6 +52,7 @@ class Video:
 
     # ---------- dibujo ----------
     def draw(self, t):
+        t = max(0.0, t)  # las submuestras del fotograma 0 no deben caer en t<0 (pintaban el cierre)
         b = t * BPS
         frac = b - math.floor(b)
         pulse = math.exp(-frac * 5.0)

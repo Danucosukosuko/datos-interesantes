@@ -62,21 +62,23 @@ PERSON = [".#.", "###", ".#.", "#.#"]
 # ---------- escenas ----------
 
 def s_title(c, l, d, b, h):
-    lines = [("¿POR QUÉ", AMBER), ("EL CIELO", AMBER), ("ES AZUL?", ORANGE)]
-    for k, (txt, col) in enumerate(lines):
-        st = k * 0.5
-        if l < st:
-            continue
-        p = gfx.ease_out_back((l - st) * 3, 2.2)
-        c.text(txt, 90, gfx.lerp(-40, 44 + k * 36, p), col, 3, "center")
-    s = gfx.ease_out_back(l * 2, 1.8)
-    c.oy += round((1 - s) * 80)
-    sun(c, 90, 204, 14, b)
-    c.oy -= round((1 - s) * 80)
-    if l >= 3:
-        p = gfx.ease_out_back((l - 3) * 3, 2.4)
-        col = RED if int(b * 2) % 2 == 0 else ORANGE
-        c.text("¿VIOLETA?", 90, gfx.lerp(330, 150, p), col, 2, "center")
+    # Gancho visible desde el fotograma 0: nada entra desde fuera de la pantalla.
+    sun(c, 90, 214, 14, b)
+    if l < 4:
+        pulse = math.exp(-(b % 1) * 5)
+        c.text("EL CIELO", 90, 40, AMBER, 3, "center")
+        c.text("DEBERÍA", 90, 76, AMBER, 3, "center")
+        c.text("SER", 90, 112, AMBER, 3, "center")
+        c.ox = round(math.sin(b * 40) * 2 * pulse)
+        c.text("VIOLETA", 90, 144, gfx.mix(RED, HOT, pulse * 0.3), 4, "center")
+        c.ox = 0
+        return
+    p = gfx.ease_out_back((l - 4) * 4, 2.2)
+    sz = 3 if p > 0.6 else 2
+    c.text("¿POR QUÉ", 90, 52, AMBER, sz, "center")
+    c.text("ES AZUL?", 90, 92, ORANGE, sz, "center")
+    if l >= 5:
+        c.text("Y NO VIOLETA", 90, 140, RED, 2, "center")
 
 
 COLORS = ["ROJO", "NARANJA", "AMARILLO", "VERDE", "AZUL", "AÑIL", "VIOLETA"]
@@ -304,7 +306,7 @@ SCENES = [
 ]
 
 SUBS = [
-    (0, "LA FÍSICA DICE", 0.5), (3, "QUE DEBERÍA", 0.5), (5, "SER VIOLETA", 0.5),
+    (0, "EL CIELO DEBERÍA", 0.6), (2.4, "SER VIOLETA", 0.6), (4, "¿POR QUÉ ES AZUL?", 0.6),
     (8, "LA LUZ DEL SOL", 1), (11, "TARDA 8 MINUTOS", 1), (14, "EN LLEGAR", 1),
     (16, "PARECE BLANCA", 1), (19, "PERO LLEVA", 1), (21, "TODOS LOS COLORES", 1),
     (24, "CADA COLOR ES", 1), (27, "UNA ONDA", 1),
@@ -322,8 +324,7 @@ SUBS = [
 ]
 
 SFX = (
-    [(0, "whoosh"), (0, "blip_up"), (0.5, "blip_up"), (1, "blip_up"), (1.5, "power_up"),
-     (3, "error"), (5, "ding")]
+    [(0, "power_up"), (1, "error"), (2, "error"), (3, "error"), (4, "whoosh"), (4.2, "blip_up"), (5, "ding")]
     + [(s, "whoosh") for s in (8, 24, 38, 52, 66, 80, 100)]
     + [(8.5, "send")] + [(9 + k, "tick") for k in range(5)] + [(13.5, "ding")]
     + [(16, "sweep_up"), (17, "blip_up"), (17.7, "blip_up"), (18.3, "blip_up"), (19, "blip_up"),
