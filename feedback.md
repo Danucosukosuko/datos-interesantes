@@ -3,13 +3,14 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-01)
+## Vídeos y métricas (actualizado 2026-11-02)
 
 | Fecha | Tema | Categoría | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | Retención | View rate (>3 s) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | 199 | 161 | 10 | 0 | 4 | 1 | 11,8 | n/d | 41,7 % |
 | 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | 175 | 150 | 4 | 2 | 0 | 0 | 9,2 | n/d | 34,0 % |
-| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | — | — | — | — | — | — | — | — | — (programado 18:00, sin datos aún) |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | — | — | — | — | — | — | — | — | — (publicado, Metricool aún sin datos) |
+| 2026-11-02 | ¿Por qué el cielo es azul? | física | — | — | — | — | — | — | — | — | — (programado 18:00) |
 
 Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)/alcance = 1,6 % · view rate 37,9 % · 10,5 s de 60 s vistos de media. Metricool no devuelve retención (IGRE27) para esta cuenta.
 
@@ -20,6 +21,12 @@ Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)
 | tecnología | 2 | 37,9 % | 10,5 s | 1,6 % |
 
 ## Conclusiones y decisiones
+
+### 2026-11-02
+- Métricas sin cambios (ordenador y WiFi idénticos a ayer); el vídeo de internet (1-nov) aún no aparece en Metricool. Siguen siendo 2 vídeos con datos → solo anotaciones.
+- Tema de hoy: «¿Por qué el cielo es azul?» (física), primera categoría distinta de tecnología, para poder comparar.
+- Formato aplicado: gancho de contradicción en el segundo 0 («la física dice que debería ser violeta»), título completo en 1,5 s y subtítulos desde el inicio; texto del post abre con la misma pregunta-gancho.
+- Próximo: alternar (siguiente candidato de la lista: «¿Cómo funciona el GPS?», tecnología).
 
 ### 2026-11-01
 - 2 vídeos con datos (menos de 4): solo anotaciones, sin conclusiones fuertes.

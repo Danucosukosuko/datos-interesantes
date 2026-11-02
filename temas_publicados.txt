@@ -1,3 +1,4 @@
 2026-10-27 | ¿Cómo funciona un ordenador?
 2026-10-28 | ¿Cómo funciona el WiFi?
 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología
+2026-11-02 | ¿Por qué el cielo es azul? | física
