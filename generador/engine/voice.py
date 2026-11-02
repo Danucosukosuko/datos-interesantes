@@ -12,7 +12,7 @@ import numpy as np
 
 from . import audio
 
-BASE_TEMPO = 1.08     # Pico habla algo lento para el ritmo de un Reel
+BASE_TEMPO = 1.0
 MAX_TEMPO = 1.4
 GAP = 0.15            # silencio mínimo entre frases (s)
 
@@ -52,7 +52,7 @@ def synth(text, path, prev=None, nxt=None):
 
 
 def _load(path, tempo):
-    filt = (f"highpass=f=90,lowpass=f=7600,atempo={tempo:.3f},"
+    filt = (f"highpass=f=80,atempo={tempo:.3f},"
             "acompressor=threshold=-20dB:ratio=3:attack=5:release=80,"
             "loudnorm=I=-16:TP=-1.5:LRA=7")
     raw = subprocess.run(["ffmpeg", "-v", "error", "-i", path, "-af", filt,
