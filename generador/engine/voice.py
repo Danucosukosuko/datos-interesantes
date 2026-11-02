@@ -27,15 +27,19 @@ def available():
 
 
 def _eleven(text, path, prev=None, nxt=None):
-    """Sintetiza con ElevenLabs (modelo multilingüe) y guarda un mp3."""
+    """Sintetiza con ElevenLabs y guarda un mp3. Modelo por defecto: Eleven v3, que entiende
+    etiquetas de entonación entre corchetes dentro del texto: "[emocionado] ¡Hola!"."""
     vid = os.environ.get("ELEVENLABS_VOICE_ID") or DEFAULT_VOICE_ID
-    body = {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-            "language_code": "es",
-            "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True}}
-    if prev:
-        body["previous_text"] = prev
-    if nxt:
-        body["next_text"] = nxt
+    model = os.environ.get("ELEVENLABS_MODEL", "eleven_v3")
+    body = {"text": text, "model_id": model, "language_code": "es"}
+    if model == "eleven_v3":
+        body["voice_settings"] = {"stability": 0.5, "similarity_boost": 0.8}   # v3: 0 / 0.5 / 1
+    else:
+        body["voice_settings"] = {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True}
+        if prev:
+            body["previous_text"] = prev
+        if nxt:
+            body["next_text"] = nxt
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128",
         data=json.dumps(body).encode(), method="POST",
