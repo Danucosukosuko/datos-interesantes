@@ -22,6 +22,12 @@ Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)
 
 ## Conclusiones y decisiones
 
+### 2026-11-02 (tarde, con Pablo)
+- Voz en off: ElevenLabs (Eleven v3, voz elegida por Pablo), con etiquetas de entonación en todas las frases; cierre tranquilo «[cálido] Sígueme para más datos curiosos.» (el entusiasta sonaba forzado).
+- Subtítulos generados desde los tiempos exactos de la voz; los dibujos de cada escena se ajustan al momento en que la voz los nombra (make.py --words). La música se mantiene, atenuada bajo la voz.
+- Lista de temas reordenada por temporada/tendencias (GPS, otoño, gatos, contraseñas, estaciones, microondas, Leónidas, IA, bostezos…; contactless y precios en 9 la semana del Black Friday; Spotify antes del Wrapped). Cada ejecución mira tendencias de la semana.
+- Texto: palabra clave en la 1.ª línea y dicha por la voz, 5 hashtags (límite de Instagram), texto alternativo, primer comentario con pregunta de SÍ/NO.
+
 ### 2026-11-02 (diagnóstico de alcance, a petición de Pablo)
 - Situación: 3 seguidores. Cada Reel llega a ~140-160 cuentas el primer día y el alcance cae a 0 al día siguiente → Instagram enseña cada vídeo a un grupo de prueba y ninguno ha pasado la prueba.
 - Tendencia mala: view rate 41,7 % → 34,0 % → 14,1 %; tiempo medio 11,8 s → 9,2 s → 4,0 s (de 60 s). Guardados+compartidos: 5 → 0 → 0.
