@@ -85,14 +85,14 @@ COLORS = ["ROJO", "NARANJA", "AMARILLO", "VERDE", "AZUL", "AÑIL", "VIOLETA"]
 
 
 def s_luz(c, l, d, b, h):
-    if l < 8:
+    if l < 4.5:
         sun(c, 30, 104, 14, b)
         c.disc(152, 104, 16, PANEL)
         c.ring(152, 104, 16, 2, ORANGE, a0=-180, a1=180)
         c.rect(144, 98, 8, 5, DIM)
         c.rect(154, 108, 9, 4, DIM)
         c.text("TIERRA", 152, 126, ORANGE, 1, "center")
-        t = gfx.clamp01((l - 0.5) / 5)
+        t = gfx.clamp01((l - 0.5) / 3.5)
         x = gfx.lerp(48, 134, t)
         for i in range(48, int(x), 4):
             c.rect(i, 103, 2, 2, AMBER)
@@ -101,7 +101,7 @@ def s_luz(c, l, d, b, h):
         secs = int(500 * t)
         c.text(f"{secs // 60} MIN {secs % 60:02d} S", 90, 150, AMBER if t >= 1 else ORANGE, 2, "center")
         return
-    q = l - 8
+    q = l - 4.5
     # luz blanca entra en un prisma y se abre en colores
     c.text("LUZ BLANCA", 40, 52, AMBER, 1, "center")
     c.rect(0, 148, 74, 3, HOT)
@@ -122,7 +122,7 @@ def s_luz(c, l, d, b, h):
 
 def s_ondas(c, l, d, b, h):
     ph = b * 2 * math.pi * 0.5
-    rows = [(0, "ROJO", "700 NM", 64, RED), (4, "AZUL", "450 NM", 40, AMBER), (9, "VIOLETA", "400 NM", 34, ORANGE)]
+    rows = [(0, "ROJO", "700 NM", 64, RED), (4, "AZUL", "450 NM", 40, AMBER), (7, "VIOLETA", "400 NM", 34, ORANGE)]
     for k, (st, name, nm, wl, col) in enumerate(rows):
         if l < st:
             continue
@@ -137,7 +137,7 @@ def s_ondas(c, l, d, b, h):
 
 def s_aire(c, l, d, b, h):
     ph = b * 2 * math.pi * 0.5
-    if l < 7:
+    if l < 3.5:
         for k in range(26):
             x = (k * 53 + l * (6 + k % 5)) % 176 + 2
             y = 60 + (k * 37) % 150 + math.sin(l * 2 + k) * 3
@@ -146,7 +146,7 @@ def s_aire(c, l, d, b, h):
             c.text("N2", 44, 92, AMBER, 2, "center")
             c.text("O2", 136, 168, AMBER, 2, "center")
         return
-    q = l - 7
+    q = l - 3.5
     p = gfx.ease_out_back(q * 2, 1.6)
     wave(c, 6, 174, 120, 30 * p, 168, ph, AMBER, t=3)
     c.text("ONDA DE LUZ", 90, 74, AMBER, 1, "center")
@@ -187,7 +187,7 @@ def s_rebote(c, l, d, b, h):
     c.text("DISPERSIÓN", 90, 186, ORANGE, 1, "center")
 
 
-ITEMS = [(2, "EL SOL EMITE", "MENOS VIOLETA"), (6, "LA ALTA ATMÓSFERA", "ABSORBE PARTE"), (10, "TUS OJOS VEN", "MEJOR EL AZUL")]
+ITEMS = [(1.8, "EL SOL EMITE", "MENOS VIOLETA"), (5.3, "LA ALTA ATMÓSFERA", "ABSORBE PARTE"), (8.5, "TUS OJOS VEN", "MEJOR EL AZUL")]
 
 
 def s_violeta(c, l, d, b, h):
@@ -214,7 +214,7 @@ def s_violeta(c, l, d, b, h):
 
 def s_atardecer(c, l, d, b, h):
     cx, cy, R, A = 90, 430, 240, 30
-    eve = gfx.ease_in_out((l - 8) / 4)
+    eve = gfx.ease_in_out((l - 0.5) / 3)
     # cielo que se enrojece
     c.rect(0, 40, 180, 160, RED, a=0.28 * eve)
     c.ring(cx, cy, R, A, ORANGE, a=0.18, a0=-180, a1=0)
@@ -239,12 +239,12 @@ def s_atardecer(c, l, d, b, h):
         if inside and eve > 0.5 and i % 6 == 0:
             r = ((l * 10 + i) % 14)
             c.rect(x, y - 4 - r, 2, 2, AMBER, a=1 - r / 14)
-    if l < 8:
+    if l < 0.6:
         c.text("POCO AIRE", 120, 150, AMBER, 1)
-    if l >= 10:
+    if l >= 2.4:
         c.text("MUCHO MÁS AIRE", 90, 130, AMBER, 1, "center")
-    if l >= 14:
-        p = gfx.ease_out_back((l - 14) * 2, 2.2)
+    if l >= 10.4:
+        p = gfx.ease_out_back((l - 10.4) * 2, 2.2)
         c.text("ROJO Y NARANJA", 90, gfx.lerp(-30, 52, p), RED, 2, "center")
 
 
@@ -348,5 +348,5 @@ VOICE = [
     (66, "[pensativo] ¿Y el violeta? El Sol emite menos, parte se absorbe arriba... [cómplice] y tus ojos ven mejor el azul."),
     (80, "[sereno] Al atardecer, la luz cruza mucho más aire. El azul se pierde por el camino... y nos llegan rojos y naranjas."),
     (100, "[intrigado] ¿Y en Marte? [riendo] ¡Al revés! Cielo color caramelo... y atardeceres azules."),
-    (116, "[emocionado] ¡Sígueme para más datos curiosos!"),
+    (116, "[cálido] Sígueme para más datos curiosos."),
 ]

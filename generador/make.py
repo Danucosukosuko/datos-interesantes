@@ -19,9 +19,13 @@ def main():
     ap.add_argument("--render")
     ap.add_argument("--beats", default="")
     ap.add_argument("--cover")
+    ap.add_argument("--words", action="store_true", help="muestra en qué beat dice la voz cada palabra")
     a = ap.parse_args()
     T = importlib.import_module(f"topics.{a.topic}")
     v = Video(T)
+    if a.words:
+        for st, txt, wbs in v.subs:
+            print("  ".join(f"{b:6.2f} {w}" for b, w in zip(wbs, txt.split())))
     if a.preview:
         if a.beats:
             beats = [float(x) for x in a.beats.split(",")]

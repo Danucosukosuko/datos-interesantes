@@ -105,3 +105,8 @@ def text_width(s, scale=1):
     if not s:
         return 0
     return (sum(glyph(c).shape[1] + 1 for c in s) - 1) * scale
+
+
+def has(ch):
+    """True si la fuente sabe dibujar el carácter."""
+    return ch == " " or ch in G or ch in ACCENTED

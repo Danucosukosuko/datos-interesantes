@@ -3,6 +3,8 @@ Un tema la activa definiendo VOICE = [(beat, "frase"), ...]. Cada frase se acele
 lo justo para terminar antes de la siguiente (máx. x1,4).
 Motor: ElevenLabs si hay ELEVENLABS_API_KEY en el entorno (voz elegida por Pablo,
 cambiable con ELEVENLABS_VOICE_ID); si no, SVOX Pico (`pico2wave -l es-ES`, calidad baja: solo para pruebas)."""
+import base64
+import hashlib
 import json
 import os
 import subprocess
@@ -26,9 +28,7 @@ def available():
     return bool(os.environ.get("ELEVENLABS_API_KEY"))
 
 
-def _eleven(text, path, prev=None, nxt=None):
-    """Sintetiza con ElevenLabs y guarda un mp3. Modelo por defecto: Eleven v3, que entiende
-    etiquetas de entonación entre corchetes dentro del texto: "[emocionado] ¡Hola!"."""
+def _request(text, endpoint, prev=None, nxt=None):
     vid = os.environ.get("ELEVENLABS_VOICE_ID") or DEFAULT_VOICE_ID
     model = os.environ.get("ELEVENLABS_MODEL", "eleven_v3")
     body = {"text": text, "model_id": model, "language_code": "es"}
@@ -41,19 +41,53 @@ def _eleven(text, path, prev=None, nxt=None):
         if nxt:
             body["next_text"] = nxt
     req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128",
+        f"https://api.elevenlabs.io/v1/text-to-speech/{vid}{endpoint}?output_format=mp3_44100_128",
         data=json.dumps(body).encode(), method="POST",
-        headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json",
-                 "Accept": "audio/mpeg"})
-    with urllib.request.urlopen(req, timeout=120) as r, open(path, "wb") as f:
-        f.write(r.read())
+        headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=180) as r:
+        return r.read()
+
+
+def _eleven(text, path, prev=None, nxt=None):
+    """Sintetiza con ElevenLabs y guarda un mp3. Modelo por defecto: Eleven v3, que entiende
+    etiquetas de entonación entre corchetes dentro del texto: "[cálido] Hola."."""
+    with open(path, "wb") as f:
+        f.write(_request(text, "", prev, nxt))
+
+
+def _eleven_ts(text, path, prev=None, nxt=None):
+    """Como _eleven, pero devuelve [(segundo, palabra)] con el instante en que empieza cada palabra
+    (las etiquetas [..] no cuentan como palabras)."""
+    d = json.loads(_request(text, "/with-timestamps", prev, nxt))
+    with open(path, "wb") as f:
+        f.write(base64.b64decode(d["audio_base64"]))
+    al = d.get("alignment") or d.get("normalized_alignment")
+    words, cur, t0, tag = [], "", None, False
+    for ch, t in zip(al["characters"], al["character_start_times_seconds"]):
+        if ch == "[":
+            tag = True
+        if tag:
+            if ch == "]":
+                tag = False
+            continue
+        if ch.isspace():
+            if cur.strip():
+                words.append((t0, cur))
+            cur, t0 = "", None
+            continue
+        if t0 is None:
+            t0 = t
+        cur += ch
+    if cur.strip():
+        words.append((t0, cur))
+    return words
 
 
 def synth(text, path, prev=None, nxt=None):
     if available():
-        _eleven(text, path, prev, nxt)
-    else:
-        _pico(text, path)
+        return _eleven_ts(text, path, prev, nxt)
+    _pico(text, path)
+    return None
 
 
 def _load(path, tempo):
@@ -67,32 +101,86 @@ def _load(path, tempo):
 
 
 def _trim(sig, thr=0.01):
+    """Quita silencios al principio y al final; devuelve (señal, muestras quitadas al principio)."""
     idx = np.flatnonzero(np.abs(sig) > thr)
-    return sig[idx[0]:idx[-1] + 1] if len(idx) else sig
+    return (sig[idx[0]:idx[-1] + 1], int(idx[0])) if len(idx) else (sig, 0)
 
 
-def track(lines):
-    """Devuelve la pista de voz (float32, misma longitud que la música)."""
-    buf = np.zeros(audio.TOTAL + audio.SR * 2, np.float32)
+def track(lines, cache_dir=None):
+    """Devuelve (pista de voz float32 de la misma longitud que la música, palabras).
+    palabras = [(nº de frase, beat en que empieza, palabra)] o None si el motor no da tiempos.
+    Con cache_dir, el resultado se guarda y no se vuelve a pedir a ElevenLabs (ahorra créditos)."""
     lines = sorted(lines)
+    key = hashlib.sha1(json.dumps([lines, available(), os.environ.get("ELEVENLABS_VOICE_ID") or DEFAULT_VOICE_ID,
+                                   os.environ.get("ELEVENLABS_MODEL", "eleven_v3")]).encode()).hexdigest()[:16]
+    cpath = os.path.join(cache_dir, f"voz_{key}.npz") if cache_dir else None
+    if cpath and os.path.exists(cpath):
+        z = np.load(cpath, allow_pickle=False)
+        words = json.loads(str(z["words"]))
+        return z["buf"], ([tuple(w) for w in words] if words is not None else None)
+    buf = np.zeros(audio.TOTAL + audio.SR * 2, np.float32)
+    all_words = []
+    bps = audio.BPM / 60.0
     with tempfile.TemporaryDirectory() as td:
         for k, (beat, text) in enumerate(lines):
             end = lines[k + 1][0] if k + 1 < len(lines) else audio.BEATS
-            avail = (end - beat) * 60.0 / audio.BPM - GAP
+            avail = (end - beat) / bps - GAP
             p = os.path.join(td, f"v{k}.{'mp3' if available() else 'wav'}")
-            synth(text, p, lines[k - 1][1] if k else None, lines[k + 1][1] if k + 1 < len(lines) else None)
-            sig = _trim(_load(p, BASE_TEMPO))
+            words = synth(text, p, lines[k - 1][1] if k else None, lines[k + 1][1] if k + 1 < len(lines) else None)
+            tempo = BASE_TEMPO
+            sig, off = _trim(_load(p, tempo))
             dur = len(sig) / audio.SR
             if dur > avail:
                 tempo = min(MAX_TEMPO, BASE_TEMPO * dur / avail)
-                sig = _trim(_load(p, tempo))
+                sig, off = _trim(_load(p, tempo))
                 dur = len(sig) / audio.SR
                 if dur > avail:
                     print(f"  AVISO voz: «{text}» dura {dur:.2f} s y solo caben {avail:.2f} s; acórtala")
             i = audio.b2s(beat)
             j = min(len(buf), i + len(sig))
             buf[i:j] += sig[:j - i]
-    return buf[:audio.TOTAL]
+            if words is not None:
+                for t, w in words:
+                    ts = max(0.0, t / tempo - off / audio.SR)
+                    all_words.append((k, beat + ts * bps, w))
+    buf = buf[:audio.TOTAL]
+    words_out = all_words if available() else None
+    if cpath:
+        os.makedirs(cache_dir, exist_ok=True)
+        np.savez(cpath, buf=buf, words=np.array(json.dumps(words_out)))
+    return buf, words_out
+
+
+def _clean(word, font):
+    word = word.replace("…", "...").replace(";", ",").replace("—", "-").replace("–", "-")
+    return "".join(ch for ch in word.upper() if font.has(ch))
+
+
+def subs_from_words(words, until=116, max_words=4, max_chars=20):
+    """Convierte las palabras con tiempo en SUBS del karaoke: [(beat, "TEXTO", [beat de cada palabra])].
+    Corta en trozos de pocas palabras y siempre tras un punto, interrogación o exclamación."""
+    from . import font
+    subs, cur, cur_b, cur_line = [], [], [], None
+
+    def flush():
+        if cur:
+            subs.append((cur_b[0], " ".join(cur), list(cur_b)))
+        cur.clear(); cur_b.clear()
+
+    for line, b, w in words:
+        if b >= until:
+            continue
+        w = _clean(w, font)
+        if not w:
+            continue
+        if line != cur_line or len(cur) >= max_words or len(" ".join(cur + [w])) > max_chars:
+            flush()
+        cur_line = line
+        cur.append(w); cur_b.append(b)
+        if w[-1] in ".?!":
+            flush()
+    flush()
+    return subs
 
 
 def duck_envelope(v, depth=0.7):

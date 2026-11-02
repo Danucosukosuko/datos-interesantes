@@ -21,6 +21,14 @@ class Video:
         self.crt = gfx.CRT()
         self.scenes = topic.SCENES
         self.subs = sorted(topic.SUBS, key=lambda s: s[0])
+        self.voice_buf = None
+        if getattr(topic, "VOICE", None):
+            from . import voice
+            import os
+            cache = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "out", ".voicecache")
+            self.voice_buf, words = voice.track(topic.VOICE, cache)
+            if words:   # subtítulos sacados de la propia voz: cada palabra se ilumina cuando se oye
+                self.subs = voice.subs_from_words(words)
         self.sfx = sorted(topic.SFX, key=lambda s: s[0])
         self.sfx_beats = np.array([s[0] for s in self.sfx], np.float32)
         self.sfx_w = np.array([0.4 if k in ("tick", "blip", "bit0", "bit1") else 1.0
@@ -121,12 +129,13 @@ class Video:
         c.oy = round((1 - appear) * 30)
         c.box(5, y0, 170, boxh, gfx.PANEL, gfx.ORANGE, a=0.9)
         c.frame(5, y0, 170, boxh, gfx.ORANGE)
-        active = min(len(words) - 1, int(math.floor((b - st) / step))) if b >= st else -1
+        wbs = list(step) if isinstance(step, (list, tuple)) else [st + k * step for k in range(len(words))]
+        active = max([k for k, wb in enumerate(wbs) if wb <= b], default=-1)
         for li, (ln, lw) in enumerate(lines):
             x = 90 - lw / 2
             y = y0 + 4 + li * lh
             for k, wd, ww in ln:
-                wb = st + k * step
+                wb = wbs[k]
                 if k == active:
                     pop = max(0.0, 1 - (b - wb) / 0.35)
                     col = gfx.mix(gfx.ORANGE, gfx.HOT, pop)
@@ -167,7 +176,7 @@ class Video:
 
     def render(self, out_mp4, wav_path):
         audio.render(self.sfx, wav_path, getattr(self.T, "MUSIC_SEED", 1), getattr(self.T, "MUSIC_KEY", 57),
-                     getattr(self.T, "VOICE", None))
+                     getattr(self.T, "VOICE", None), self.voice_buf)
         cmd = ["ffmpeg", "-y", "-loglevel", "error",
                "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{OUT_W}x{OUT_H}", "-r", str(FPS), "-i", "-",
                "-i", wav_path,
