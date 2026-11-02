@@ -348,5 +348,5 @@ VOICE = [
     (66, "[pensativo] ¿Y el violeta? El Sol emite menos, parte se absorbe arriba... [cómplice] y tus ojos ven mejor el azul."),
     (80, "[sereno] Al atardecer, la luz cruza mucho más aire. El azul se pierde por el camino... y nos llegan rojos y naranjas."),
     (100, "[intrigado] ¿Y en Marte? [riendo] ¡Al revés! Cielo color caramelo... y atardeceres azules."),
-    (116, "[cálido] Sígueme para más datos curiosos."),
+    (116, "[alegre] ¡Sígueme para más datos curiosos!"),
 ]

@@ -100,6 +100,24 @@ def _load(path, tempo):
     return np.frombuffer(raw, np.float32).copy()
 
 
+def _synth_cached(text, path, cache_dir, prev=None, nxt=None):
+    """synth() con caché por frase: cambiar una frase no vuelve a pedir las demás a ElevenLabs."""
+    if not cache_dir or not available():
+        return synth(text, path, prev, nxt)
+    key = hashlib.sha1(json.dumps([text, os.environ.get("ELEVENLABS_VOICE_ID") or DEFAULT_VOICE_ID,
+                                   os.environ.get("ELEVENLABS_MODEL", "eleven_v3")]).encode()).hexdigest()[:16]
+    mp3, js = os.path.join(cache_dir, f"frase_{key}.mp3"), os.path.join(cache_dir, f"frase_{key}.json")
+    if not (os.path.exists(mp3) and os.path.exists(js)):
+        os.makedirs(cache_dir, exist_ok=True)
+        words = synth(text, mp3, prev, nxt)
+        with open(js, "w") as f:
+            json.dump(words, f)
+    import shutil
+    shutil.copy(mp3, path)
+    with open(js) as f:
+        return [tuple(w) for w in json.load(f)]
+
+
 def _trim(sig, thr=0.01):
     """Quita silencios al principio y al final; devuelve (señal, muestras quitadas al principio)."""
     idx = np.flatnonzero(np.abs(sig) > thr)
@@ -126,7 +144,8 @@ def track(lines, cache_dir=None):
             end = lines[k + 1][0] if k + 1 < len(lines) else audio.BEATS
             avail = (end - beat) / bps - GAP
             p = os.path.join(td, f"v{k}.{'mp3' if available() else 'wav'}")
-            words = synth(text, p, lines[k - 1][1] if k else None, lines[k + 1][1] if k + 1 < len(lines) else None)
+            words = _synth_cached(text, p, cache_dir, lines[k - 1][1] if k else None,
+                                  lines[k + 1][1] if k + 1 < len(lines) else None)
             tempo = BASE_TEMPO
             sig, off = _trim(_load(p, tempo))
             dur = len(sig) / audio.SR
