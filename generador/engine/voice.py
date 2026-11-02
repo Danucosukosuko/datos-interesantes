@@ -1,9 +1,13 @@
-"""Voz en off opcional (español de España) con SVOX Pico (`pico2wave -l es-ES`).
+"""Voz en off opcional (español de España).
 Un tema la activa definiendo VOICE = [(beat, "frase"), ...]. Cada frase se acelera
-lo justo para terminar antes de la siguiente (máx. x1,4)."""
+lo justo para terminar antes de la siguiente (máx. x1,4).
+Motor: ElevenLabs si hay ELEVENLABS_API_KEY y ELEVENLABS_VOICE_ID en el entorno;
+si no, SVOX Pico (`pico2wave -l es-ES`, calidad baja: solo para pruebas)."""
+import json
 import os
 import subprocess
 import tempfile
+import urllib.request
 import numpy as np
 
 from . import audio
@@ -15,6 +19,36 @@ GAP = 0.15            # silencio mínimo entre frases (s)
 
 def _pico(text, path):
     subprocess.run(["pico2wave", "-l", "es-ES", "-w", path, text], check=True)
+
+
+def available():
+    return bool(os.environ.get("ELEVENLABS_API_KEY") and os.environ.get("ELEVENLABS_VOICE_ID"))
+
+
+def _eleven(text, path, prev=None, nxt=None):
+    """Sintetiza con ElevenLabs (modelo multilingüe) y guarda un mp3."""
+    vid = os.environ["ELEVENLABS_VOICE_ID"]
+    body = {"text": text, "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
+            "language_code": "es",
+            "voice_settings": {"stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": True}}
+    if prev:
+        body["previous_text"] = prev
+    if nxt:
+        body["next_text"] = nxt
+    req = urllib.request.Request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{vid}?output_format=mp3_44100_128",
+        data=json.dumps(body).encode(), method="POST",
+        headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"], "Content-Type": "application/json",
+                 "Accept": "audio/mpeg"})
+    with urllib.request.urlopen(req, timeout=120) as r, open(path, "wb") as f:
+        f.write(r.read())
+
+
+def synth(text, path, prev=None, nxt=None):
+    if available():
+        _eleven(text, path, prev, nxt)
+    else:
+        _pico(text, path)
 
 
 def _load(path, tempo):
@@ -40,8 +74,8 @@ def track(lines):
         for k, (beat, text) in enumerate(lines):
             end = lines[k + 1][0] if k + 1 < len(lines) else audio.BEATS
             avail = (end - beat) * 60.0 / audio.BPM - GAP
-            p = os.path.join(td, f"v{k}.wav")
-            _pico(text, p)
+            p = os.path.join(td, f"v{k}.{'mp3' if available() else 'wav'}")
+            synth(text, p, lines[k - 1][1] if k else None, lines[k + 1][1] if k + 1 < len(lines) else None)
             sig = _trim(_load(p, BASE_TEMPO))
             dur = len(sig) / audio.SR
             if dur > avail:
