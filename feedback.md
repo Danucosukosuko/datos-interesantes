@@ -9,7 +9,7 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | 199 | 161 | 10 | 0 | 4 | 1 | 11,8 | n/d | 41,7 % |
 | 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | 175 | 150 | 4 | 2 | 0 | 0 | 9,2 | n/d | 34,0 % |
-| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | — | — | — | — | — | — | — | — | — (publicado, Metricool aún sin datos) |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | 154 | 139 | 2 | 1 | 0 | 0 | 4,0 | n/d | 14,1 % |
 | 2026-11-02 | ¿Por qué el cielo es azul? | física | — | — | — | — | — | — | — | — | — (programado 18:00) |
 
 Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)/alcance = 1,6 % · view rate 37,9 % · 10,5 s de 60 s vistos de media. Metricool no devuelve retención (IGRE27) para esta cuenta.
@@ -21,6 +21,17 @@ Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)
 | tecnología | 2 | 37,9 % | 10,5 s | 1,6 % |
 
 ## Conclusiones y decisiones
+
+### 2026-11-02 (diagnóstico de alcance, a petición de Pablo)
+- Situación: 3 seguidores. Cada Reel llega a ~140-160 cuentas el primer día y el alcance cae a 0 al día siguiente → Instagram enseña cada vídeo a un grupo de prueba y ninguno ha pasado la prueba.
+- Tendencia mala: view rate 41,7 % → 34,0 % → 14,1 %; tiempo medio 11,8 s → 9,2 s → 4,0 s (de 60 s). Guardados+compartidos: 5 → 0 → 0.
+- Causa principal encontrada: el fotograma 0 salía casi negro (el título entraba volando desde fuera y, por un fallo del motor, se transparentaba el cierre «09/09»). En el vídeo de internet empeoró porque todo el gancho estaba animado.
+- Decisiones aplicadas hoy:
+  1. Motor: corregido el fallo de t<0 en el fotograma 0.
+  2. Gancho obligatorio en el fotograma 0: afirmación sorprendente, grande, sin animación de entrada (cielo: «EL CIELO DEBERÍA SER VIOLETA»). Vídeo de hoy re-renderizado y sustituido en Metricool.
+  3. Texto: primera línea = gancho, línea para invitar a enviarlo por mensaje, 5 hashtags en vez de 16.
+  4. Prompt de la tarea actualizado con estas reglas.
+- Pendiente de Pablo: enlazar TikTok y YouTube en Metricool; decidir si se prueba voz en off y/o vídeos de ~30 s.
 
 ### 2026-11-02
 - Métricas sin cambios (ordenador y WiFi idénticos a ayer); el vídeo de internet (1-nov) aún no aparece en Metricool. Siguen siendo 2 vídeos con datos → solo anotaciones.
