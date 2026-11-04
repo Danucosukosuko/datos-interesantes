@@ -3,24 +3,35 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-02)
+## Vídeos y métricas (actualizado 2026-11-04)
 
-| Fecha | Tema | Categoría | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | Retención | View rate (>3 s) |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | 199 | 161 | 10 | 0 | 4 | 1 | 11,8 | n/d | 41,7 % |
-| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | 175 | 150 | 4 | 2 | 0 | 0 | 9,2 | n/d | 34,0 % |
-| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | 154 | 139 | 2 | 1 | 0 | 0 | 4,0 | n/d | 14,1 % |
-| 2026-11-02 | ¿Por qué el cielo es azul? | física | — | — | — | — | — | — | — | — | — (programado 18:00) |
+### Instagram
+| Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | no | título animado | 199 | 161 | 10 | 0 | 4 | 1 | 11,7 | 41,7 % |
+| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | no | título animado | 175 | 150 | 4 | 2 | 0 | 0 | 9,3 | 34,0 % |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 157 | 141 | 2 | 1 | 0 | 0 | 4,3 | 13,9 % |
+| 2026-11-02 | ¿Por qué el cielo es azul? | física | sí | «EL CIELO DEBERÍA SER VIOLETA» fijo | 189 | 165 | 8 | 1 | 0 | 0 | **14,4** | **57,5 %** |
 
-Media del canal (2 vídeos): 187 views · 156 alcance · (guardados+compartidos)/alcance = 1,6 % · view rate 37,9 % · 10,5 s de 60 s vistos de media. Metricool no devuelve retención (IGRE27) para esta cuenta.
+Media Instagram (4): 180 views · 154 alcance · 9,9 s · 36,8 % view rate. Seguidores: 3.
 
-## Ranking de categorías
+### TikTok
+| Fecha | Tema | Voz | Views | Likes | Compart. |
+|---|---|---|---|---|---|
+| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 | 1 | 1 |
+| 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | — (programado 18:00) | | |
 
-| Categoría | Vídeos | View rate medio | T. medio | (Guard.+Comp.)/alcance |
-|---|---|---|---|---|
-| tecnología | 2 | 37,9 % | 10,5 s | 1,6 % |
+### Créditos de voz (ElevenLabs)
+Noviembre: 3.681 / 9.500 (todo de pruebas del 2-nov). Reserva de 900 para la Luna (11-nov).
 
 ## Conclusiones y decisiones
+
+### 2026-11-04
+- Instagram: el cielo (gancho fijo en fotograma 0 + voz) es el mejor vídeo del canal: 57,5 % pasa de 3 s (antes máx. 41,7 %) y 14,4 s de media (antes máx. 11,7). Un solo vídeo: buena señal, no conclusión. Mantener gancho fijo y voz en temas de explicación.
+- TikTok: ALERTA — el cielo lleva ~40 h con 1 visualización. Cuenta nueva, probablemente en revisión o frenada. Si a las 48 h sigue igual y el GPS de hoy también se queda en ~0, proponer a Pablo dar más peso a Instagram.
+- Opinión de 1 de 3 personas consultadas por Pablo: «interesantes y bien hechos». Faltan 2.
+- Hoy: GPS en TikTok, SIN voz (regla: vídeos solo de TikTok sin voz; además TikTok aún no reparte). Gancho «TU MÓVIL SABE DÓNDE ESTÁS SIN INTERNET».
+- Publicaciones de noviembre: 4/20.
 
 ### 2026-11-02 (tarde, con Pablo)
 - Voz en off: ElevenLabs (Eleven v3, voz elegida por Pablo), con etiquetas de entonación en todas las frases; cierre tranquilo «[cálido] Sígueme para más datos curiosos.» (el entusiasta sonaba forzado).
