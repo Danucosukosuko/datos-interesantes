@@ -97,7 +97,7 @@ def s_satelites(c, l, d, b, h):
             satellite(c, x, y, 0.8)
     c.text("+30", 90, gfx.lerp(-40, 40, p), AMBER, 4, "center")
     c.text("SATÉLITES", 90, gfx.lerp(-40, 96, p), ORANGE, 2, "center")
-    if l >= 6:
+    if l >= 3:
         c.line(150, 104, 150, 176, DIM)
         c.text("20.200 KM", 146, 130, AMBER, 1, "right")
     if l >= 10:
@@ -110,11 +110,11 @@ def s_senal(c, l, d, b, h):
     for k in range(4):
         r = (l * 22 + k * 30) % 100
         c.ring(90, 72, r + 6, 2, ORANGE, a=max(0, 1 - r / 100), a0=30, a1=150)
-    if l >= 2:
+    if l >= 0.8:
         c.box(20, 92, 140, 34, PANEL, AMBER)
         c.text("SOY EL SATÉLITE 7", 90, 96, AMBER, 1, "center")
         c.text("HORA: 12:00:00,000000", 90, 110, ORANGE, 1, "center")
-    if l >= 7:
+    if l >= 3.5:
         c.text("TU MÓVIL", 90, 136, AMBER, 2, "center")
         c.text("SOLO ESCUCHA", 90, 154, RED, 2, "center")
 
@@ -131,10 +131,11 @@ def s_tiempo(c, l, d, b, h):
     if t < 1:
         c.rect(x - 2, y - 2, 5, 5, HOT)
     c.text(f"0,{int(67 * t):03d} S", 90, 104, AMBER if t >= 1 else ORANGE, 3, "center")
-    if l >= 7:
+    if l >= 0.5:
         c.text("TIEMPO x VELOCIDAD", 90, 140, ORANGE, 1, "center")
         c.text("DE LA LUZ", 90, 152, ORANGE, 1, "center")
-        c.text("= DISTANCIA", 90, 214, AMBER, 2, "center")
+        if l >= 4:
+            c.text("= DISTANCIA", 90, 214, AMBER, 2, "center")
 
 
 SATS = [(40, 120, 58), (138, 104, 66), (92, 196, 52)]
@@ -143,14 +144,14 @@ SATS = [(40, 120, 58), (138, 104, 66), (92, 196, 52)]
 def s_circulos(c, l, d, b, h):
     px, py = 92, 144
     for k, (x, y, r) in enumerate(SATS):
-        st = 1 + k * 3
+        st = 0.3 + k * 1.0
         if l < st:
             continue
         e = gfx.ease_out_cubic((l - st) / 1.5)
         c.ring(x, y, r * e, 2, AMBER if k == 2 else ORANGE, a0=-180, a1=180)
         satellite(c, x, y, 0.6)
     c.text("1 DISTANCIA = 1 CÍRCULO", 90, 46, ORANGE, 1, "center")
-    if l >= 10:
+    if l >= 4.5:
         pin(c, px, py + 4, 1.4)
         c.text("¡AQUÍ ESTÁS!", 90, 218, RED, 2, "center")
 
@@ -163,9 +164,9 @@ def s_cuarto(c, l, d, b, h):
         satellite(c, 90, gfx.lerp(-20, 96, p), 0.9, HOT)
         c.text("EL 4", 112, gfx.lerp(-20, 92, p), HOT, 1)
     clock(c, 90, 150, 18, b * math.pi)
-    if l >= 6:
+    if l >= 0.3:
         c.text("1 MICROSEGUNDO", 90, 180, AMBER, 2, "center")
-    if l >= 8:
+    if l >= 3.2:
         c.text("= 300 M DE ERROR", 90, 200, RED, 2, "center")
 
 
@@ -174,15 +175,15 @@ def s_einstein(c, l, d, b, h):
     c.text("TIERRA", 134, 48, ORANGE, 1, "center")
     clock(c, 46, 80, 20, b * math.pi * 1.06, AMBER)
     clock(c, 134, 80, 20, b * math.pi, DIM)
-    if l >= 3:
+    if l >= 0.5:
         c.text("MENOS GRAVEDAD: +45", 90, 112, AMBER, 1, "center")
-    if l >= 6:
+    if l >= 1.2:
         c.text("MÁS VELOCIDAD: -7", 90, 126, ORANGE, 1, "center")
-    if l >= 9:
-        p = gfx.ease_out_back((l - 9) * 2, 2.2)
+    if l >= 2:
+        p = gfx.ease_out_back((l - 2) * 2, 2.2)
         c.text("+0,000038 S", 90, gfx.lerp(330, 146, p), AMBER, 2, "center")
         c.text("AL DÍA", 90, gfx.lerp(330, 164, p), ORANGE, 1, "center")
-    if l >= 13:
+    if l >= 3.9:
         c.text("SIN CORREGIR:", 90, 188, ORANGE, 1, "center")
         c.text("+10 KM AL DÍA", 90, 200, RED, 2, "center")
 
@@ -197,10 +198,10 @@ def s_precision(c, l, d, b, h):
     c.rect(86, 52, 4, 150, DIM)
     bounce = abs(math.sin(b * math.pi)) * 6
     pin(c, 88, 124 - bounce, 1.6)
-    if l >= 3:
+    if l >= 4:
         c.box(26, 172, 128, 24, PANEL, AMBER)
         c.text("SIN DATOS: OK", 90, 177, AMBER, 2, "center")
-    if l >= 9:
+    if l >= 1.5:
         c.text("SOLO NECESITA", 90, 212, ORANGE, 1, "center")
         c.text("VER EL CIELO", 90, 224, AMBER, 2, "center")
 
@@ -256,12 +257,25 @@ SUBS = [
 SFX = (
     [(0, "power_up"), (1, "error"), (2, "error"), (3, "error"), (4, "whoosh"), (4.2, "blip_up"), (5, "ping")]
     + [(s, "whoosh") for s in (8, 24, 38, 52, 66, 80, 100)]
-    + [(8.8 + k * 0.83, "blip_up") for k in range(8)] + [(14, "sweep_up"), (18, "ding")]
-    + [(25, "ping"), (26, "bits"), (28, "bits"), (31, "ping"), (33, "power_down")]
+    + [(8.8 + k * 0.83, "blip_up") for k in range(8)] + [(11, "sweep_up"), (18, "ding")]
+    + [(25, "ping"), (26, "bits"), (28, "bits"), (27.5, "ping"), (33, "power_down")]
     + [(39, "send"), (40, "tick"), (41, "tick"), (42, "tick"), (43, "tick"), (44, "ding"), (45, "sweep_up")]
-    + [(53, "sweep_up"), (56, "sweep_up"), (59, "sweep_up"), (62, "ding"), (63, "power_up")]
-    + [(68, "power_up"), (72, "tick"), (73, "tick"), (74, "blip"), (76, "error")]
-    + [(81, "blip_up"), (83, "ping"), (86, "ping"), (89, "power_up"), (93, "error"), (95, "error")]
-    + [(101, "thud"), (103, "ding"), (109, "power_up")]
+    + [(52.3, "sweep_up"), (53.3, "sweep_up"), (54.3, "sweep_up"), (56.5, "ding"), (57, "power_up")]
+    + [(68, "power_up"), (66.3, "blip"), (69.2, "error")]
+    + [(81, "blip_up"), (83, "ping"), (86, "ping"), (82, "power_up"), (83.9, "error"), (84.4, "error")]
+    + [(101, "thud"), (103, "ding"), (101.6, "power_up")]
     + outro_sfx(116)
 )
+
+# Voz en off (compacta para que los créditos lleguen a todos los vídeos del mes)
+VOICE = [
+    (0, "[intrigado] Tu móvil sabe dónde estás… ¡sin internet!"),
+    (8, "Más de treinta satélites, a veinte mil kilómetros."),
+    (24, "[misterioso] Cada uno dice su hora exacta. Tu móvil solo escucha."),
+    (38, "Tiempo por velocidad de la luz… distancia."),
+    (52, "[cómplice] Tres distancias se cruzan en un punto: ¡tú!"),
+    (66, "Un microsegundo de error son trescientos metros."),
+    (80, "[asombrado] Y por Einstein, sin corregir, ¡diez kilómetros de error al día!"),
+    (100, "[sereno] Solo necesita ver el cielo."),
+    (116, "[alegre] ¡Sígueme para más datos curiosos!"),
+]
