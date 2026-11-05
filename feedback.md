@@ -13,9 +13,10 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 159 | 141 | 3 | 2 | 0 | 0 | 4,7 | 14,5 % |
 | 2026-11-02 | ¿Por qué el cielo es azul? | física | sí | «EL CIELO DEBERÍA SER VIOLETA» fijo | 189 | 165 | 7 | 1 | 0 | 0 | **15,2** | **57,5 %** |
 
-Media Instagram (4): 181 views · 154 alcance · 10,2 s · 36,9 % view rate. Seguidores: 3.
 | 2026-11-05 | Central nuclear (1): ¿por qué uranio? | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | — (programado 18:00, cruzado) | | | | | | | |
 | 2026-11-06 | Central nuclear (2): ¿cómo funciona? | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | — (programado 18:00, cruzado) | | | | | | | |
+
+Media Instagram (4): 181 views · 154 alcance · 10,2 s · 36,9 % view rate. Seguidores: 3.
 
 ### TikTok
 | Fecha | Tema | Voz | Views | Likes | Compart. |
