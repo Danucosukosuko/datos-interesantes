@@ -3,3 +3,5 @@
 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología
 2026-11-02 | ¿Por qué el cielo es azul? | física
 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | tecnología | tiktok | sin voz
+2026-11-05 | Central nuclear, parte 1: ¿por qué uranio? | física | instagram+tiktok | con voz
+2026-11-06 | Central nuclear, parte 2: ¿cómo funciona una central nuclear? | tecnología | instagram+tiktok | con voz

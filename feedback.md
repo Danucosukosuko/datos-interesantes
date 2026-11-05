@@ -26,6 +26,12 @@ Noviembre: 3.681 / 9.500 (todo de pruebas del 2-nov). Reserva de 900 para la Lun
 
 ## Conclusiones y decisiones
 
+### 2026-11-05 (petición de Pablo)
+- Serie en 2 partes sobre la central nuclear, con voz y en las dos redes, para generar expectativa: parte 1 «¿Por qué uranio?» (5-nov 18:00, termina con «mañana, la segunda parte») y parte 2 «¿Cómo funciona?» (6-nov 18:00). Medir si la parte 2 retiene más gracias al gancho de la 1.
+- El GPS (4-nov) salió en TikTok sin voz; la versión con voz quedó hecha y sin publicar.
+- Publicaciones de noviembre: 8/20 tras la serie. Con el calendario normal (13 vídeos de una red + Luna cruzada = 15) se pasaría a 23: la tarea saltará los últimos días si no caben.
+- Créditos de voz: ver creditos_voz.csv (~5.400 → ~4.200 tras la serie; Luna reservada).
+
 ### 2026-11-04
 - Instagram: el cielo (gancho fijo en fotograma 0 + voz) es el mejor vídeo del canal: 57,5 % pasa de 3 s (antes máx. 41,7 %) y 14,4 s de media (antes máx. 11,7). Un solo vídeo: buena señal, no conclusión. Mantener gancho fijo y voz en temas de explicación.
 - TikTok: ALERTA — el cielo lleva ~40 h con 1 visualización. Cuenta nueva, probablemente en revisión o frenada. Si a las 48 h sigue igual y el GPS de hoy también se queda en ~0, proponer a Pablo dar más peso a Instagram.
