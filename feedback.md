@@ -3,28 +3,40 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-04)
+## Vídeos y métricas (actualizado 2026-11-05)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | no | título animado | 199 | 161 | 10 | 0 | 4 | 1 | 11,7 | 41,7 % |
 | 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | no | título animado | 175 | 150 | 4 | 2 | 0 | 0 | 9,3 | 34,0 % |
-| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 157 | 141 | 2 | 1 | 0 | 0 | 4,3 | 13,9 % |
-| 2026-11-02 | ¿Por qué el cielo es azul? | física | sí | «EL CIELO DEBERÍA SER VIOLETA» fijo | 189 | 165 | 8 | 1 | 0 | 0 | **14,4** | **57,5 %** |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 159 | 141 | 3 | 2 | 0 | 0 | 4,7 | 14,5 % |
+| 2026-11-02 | ¿Por qué el cielo es azul? | física | sí | «EL CIELO DEBERÍA SER VIOLETA» fijo | 189 | 165 | 7 | 1 | 0 | 0 | **15,2** | **57,5 %** |
 
-Media Instagram (4): 180 views · 154 alcance · 9,9 s · 36,8 % view rate. Seguidores: 3.
+Media Instagram (4): 181 views · 154 alcance · 10,2 s · 36,9 % view rate. Seguidores: 3.
+| 2026-11-05 | Central nuclear (1): ¿por qué uranio? | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | — (programado 18:00, cruzado) | | | | | | | |
+| 2026-11-06 | Central nuclear (2): ¿cómo funciona? | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | — (programado 18:00, cruzado) | | | | | | | |
 
 ### TikTok
 | Fecha | Tema | Voz | Views | Likes | Compart. |
 |---|---|---|---|---|---|
-| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 | 1 | 1 |
-| 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | — (programado 18:00) | | |
+| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 (a las ~65 h) | 1 | 1 |
+| 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | — (Metricool aún no lo sincroniza) | | |
+| 2026-11-05 | Central nuclear (1) (cruzado) | sí | — (programado 18:00) | | |
+| 2026-11-06 | Central nuclear (2) (cruzado) | sí | — (programado 18:00) | | |
 
 ### Créditos de voz (ElevenLabs)
-Noviembre: 3.681 / 9.500 (todo de pruebas del 2-nov). Reserva de 900 para la Luna (11-nov).
+Noviembre: 5.195 / 9.500 (quedan 4.305; ver creditos_voz.csv). Reserva de 900 para la Luna (11-nov).
 
 ## Conclusiones y decisiones
+
+### 2026-11-05 (ejecución programada)
+- Hoy ya hay publicación (serie nuclear, parte 1, 18:00 en las dos redes) → no se genera vídeo; solo feedback.
+- Instagram: sin vídeos nuevos con datos. El cielo sube a 15,2 s de media (sigue siendo el mejor; 57,5 % pasa de 3 s). Alcance diario de la cuenta ~140-170 el día de cada vídeo y ~0 el resto: sigue en el grupo de prueba.
+- TikTok: ALERTA (>48 h) — el cielo sigue con 1 visualización a las ~65 h. El GPS (4-nov) aún no aparece en Metricool. Si el GPS también se queda en ~0, proponer a Pablo dar más peso a Instagram (2 vídeos seguidos).
+- La serie nuclear (cruzada) dará la segunda comparación directa Instagram vs TikTok y medirá si la parte 2 retiene más.
+- Planificación sin cambios: 7-nov Instagram; candidato «¿Por qué las hojas cambian de color en otoño?» (naturaleza, temporada), rompiendo la racha física/tecnología.
+- Publicaciones de noviembre: 8/20 (contando las dos partes nucleares).
 
 ### 2026-11-05 (petición de Pablo)
 - Serie en 2 partes sobre la central nuclear, con voz y en las dos redes, para generar expectativa: parte 1 «¿Por qué uranio?» (5-nov 18:00, termina con «mañana, la segunda parte») y parte 2 «¿Cómo funciona?» (6-nov 18:00). Medir si la parte 2 retiene más gracias al gancho de la 1.
