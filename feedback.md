@@ -3,32 +3,48 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-05)
+## Vídeos y métricas (actualizado 2026-11-08)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | no | título animado | 199 | 161 | 10 | 0 | 4 | 1 | 11,7 | 41,7 % |
-| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | no | título animado | 175 | 150 | 4 | 2 | 0 | 0 | 9,3 | 34,0 % |
-| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 159 | 141 | 3 | 2 | 0 | 0 | 4,7 | 14,5 % |
-| 2026-11-02 | ¿Por qué el cielo es azul? | física | sí | «EL CIELO DEBERÍA SER VIOLETA» fijo | 189 | 165 | 7 | 1 | 0 | 0 | **15,2** | **57,5 %** |
-| 2026-11-05 | Central nuclear (1): ¿por qué uranio? | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | — (programado 18:00, cruzado) | | | | | | | |
-| 2026-11-06 | Central nuclear (2): ¿cómo funciona? | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | — (programado 18:00, cruzado) | | | | | | | |
+| 2026-10-27 | ¿Cómo funciona un ordenador? | tecnología | no | título animado | 201 | 161 | 11 | 0 | 4 | 1 | 11,8 | 41,2 % |
+| 2026-10-28 | ¿Cómo funciona el WiFi? | tecnología | no | título animado | 176 | 150 | 4 | 2 | 0 | 0 | 9,3 | 33,8 % |
+| 2026-11-01 | ¿Cómo viaja un mensaje por internet? | tecnología | no | título animado (fotograma 0 casi negro) | 160 | 141 | 3 | 2 | 0 | 0 | 4,7 | 14,4 % |
+| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | física | sí | «EL CIELO DEBERÍA SER VIOLETA» | 193 | 165 | 7 | 1 | 0 | 0 | **15,1** | 56,8 % |
+| 2026-11-05 | Nuclear 1: ¿por qué uranio? (cruzado) | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | 142 | 125 | 3 | 1 | 0 | 2 | 9,6 | 41,9 % |
+| 2026-11-06 | Nuclear 2: ¿cómo funciona? (cruzado) | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | 130 | 115 | 6 | 1 | 1 | 0 | 13,2 | **63,2 %** |
+| 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | — (programado 18:00) | | | | | | | |
 
-Media Instagram (4): 181 views · 154 alcance · 10,2 s · 36,9 % view rate. Seguidores: 3.
+Media Instagram (6): 167 views · 143 alcance · 10,6 s · 41,9 % view rate. Seguidores: 3.
 
 ### TikTok
-| Fecha | Tema | Voz | Views | Likes | Compart. |
-|---|---|---|---|---|---|
-| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 (a las ~65 h) | 1 | 1 |
-| 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | — (Metricool aún no lo sincroniza) | | |
-| 2026-11-05 | Central nuclear (1) (cruzado) | sí | — (programado 18:00) | | |
-| 2026-11-06 | Central nuclear (2) (cruzado) | sí | — (programado 18:00) | | |
+| Fecha | Tema | Voz | Views | Likes | Coment. | Compart. |
+|---|---|---|---|---|---|---|
+| 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 | 1 | 0 | 1 |
+| 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | **308** | 4 | 0 | 0 |
+| 2026-11-05 | Nuclear 1 (cruzado) | sí | **501** | 22 | 0 | 0 |
+| 2026-11-06 | Nuclear 2 (cruzado) | sí | 259 | 12 | 0 | 0 |
+
+Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
+
+### Comparaciones (pocos datos: solo anotaciones)
+- **Redes:** desde el GPS, TikTok reparte: nuclear 1 = 501 views en TikTok vs 142 en Instagram; nuclear 2 = 259 vs 130. TikTok ha salido de la «revisión» de cuenta nueva.
+- **Con voz vs sin voz (Instagram):** con voz (3) 12,6 s y 54,0 % pasan de 3 s; sin voz (3) 8,6 s y 29,8 %. Los 3 sin voz además tenían el gancho viejo: no se puede separar el efecto.
+- **Serie en 2 partes:** la parte 2 retuvo más en Instagram (63,2 % y 13,2 s, el mejor view rate del canal) pero tuvo menos views en las dos redes (130 vs 142; 259 vs 501).
+- **Categorías (Instagram, t. medio):** física 12,4 s (2) · tecnología 9,8 s (4). Naturaleza: primer vídeo hoy.
 
 ### Créditos de voz (ElevenLabs)
-Noviembre: 5.195 / 9.500 (quedan 4.305; ver creditos_voz.csv). Reserva de 900 para la Luna (11-nov).
+Noviembre: 5.775 / 9.500 (quedan 3.725). Reserva de 900 para la Luna (11-nov).
 
 ## Conclusiones y decisiones
+
+### 2026-11-08 (ejecución programada)
+- La ejecución del 7-nov llegó con un día de retraso (el servicio estuvo caído): el 7-nov no hubo vídeo. Hoy se hace el que tocaba.
+- TikTok YA reparte: GPS 308, nuclear 1 501 y nuclear 2 259 views (más que Instagram). Se levanta la alerta de TikTok. Si se mantiene, proponer a Pablo dar más peso a TikTok (por ejemplo, voz también en los de TikTok).
+- Instagram: la voz y el gancho fijo siguen por encima de la media en retención (nuclear 2: 63,2 %, récord).
+- Hoy: «¿Por qué las hojas cambian de color en otoño?» (naturaleza, temporada), en Instagram, CON voz (tema de temporada y con giro sorprendente). Gancho «LAS HOJAS YA ERAN AMARILLAS». 18:00.
+- Publicaciones de noviembre: 9/20.
 
 ### 2026-11-05 (ejecución programada)
 - Hoy ya hay publicación (serie nuclear, parte 1, 18:00 en las dos redes) → no se genera vídeo; solo feedback.
