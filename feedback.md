@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-11)
+## Vídeos y métricas (actualizado 2026-11-13)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -14,8 +14,9 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | física | sí | «EL CIELO DEBERÍA SER VIOLETA» | 193 | 165 | 7 | 1 | 0 | 0 | **15,1** | 56,8 % |
 | 2026-11-05 | Nuclear 1: ¿por qué uranio? (cruzado) | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | 142 | 125 | 3 | 1 | 0 | 2 | 9,6 | 41,9 % |
 | 2026-11-06 | Nuclear 2: ¿cómo funciona? (cruzado) | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | 130 | 115 | 6 | 1 | 1 | 0 | 13,1 | **63,2 %** |
-| 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | 166 | 134 | 4 | 1 | 0 | 2 | 13,8 | 55,5 % |
-| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | — (programado 18:00) | | | | | | | |
+| 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | 166 | 134 | 4 | 1 | 0 | 2 | 14,3 | 55,5 % |
+| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | **3** ⚠️ | 3 | 3 | 1 | 0 | 0 | 6,7 | 66,7 % |
+| 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | — (programado 17:00) | | | | | | | |
 
 Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seguidores: 3.
 
@@ -24,10 +25,10 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 |---|---|---|---|---|---|---|
 | 2026-11-02 | ¿Por qué el cielo es azul? (cruzado) | sí | 1 | 1 | 0 | 1 |
 | 2026-11-04 | ¿Cómo sabe el GPS dónde estás? | no | **309** | 4 | 0 | 0 |
-| 2026-11-05 | Nuclear 1 (cruzado) | sí | **507** | 23 | 0 | 0 |
-| 2026-11-06 | Nuclear 2 (cruzado) | sí | 261 | 13 | 0 | 0 |
-| 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | — (publicado; Metricool aún no lo sincroniza) | | |
-| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | — (programado 18:00) | | | |
+| 2026-11-05 | Nuclear 1 (cruzado) | sí | **512** | 23 | 0 | 0 |
+| 2026-11-06 | Nuclear 2 (cruzado) | sí | 266 | 13 | 0 | 0 |
+| 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
+| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 243 | 6 | 0 | 0 | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -38,9 +39,17 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 - **Categorías (Instagram, t. medio):** física 12,4 s (2) · tecnología 9,8 s (4). naturaleza 13,4 s (1, otoño: 2 compartidos).
 
 ### Créditos de voz (ElevenLabs)
-Noviembre: 7.045 / 9.500 (quedan 2.455). La Luna ya está hecha: se libera la reserva.
+Noviembre: 7.710 / 9.500 (quedan 1.790).
 
 ## Conclusiones y decisiones
+
+### 2026-11-13 (ejecución programada)
+- ALERTA Instagram: la Luna (11-nov) solo tiene 3 views y 3 de alcance (alcance de la cuenta el 11-nov: 2). El resto de reels arrancan con ~115-165. Posibles causas: Metricool sin sincronizar del todo, o Instagram frenó el reel (¿algún aviso en la app?). En TikTok la misma Luna va normal (243). Revisar el 14-nov; si sigue igual, avisar a Pablo para que mire el reel en la app.
+- TikTok estable en ~245-265 por vídeo (gatos 245, Luna 243); nuclear 1 sigue siendo el mejor (512).
+- Instagram, con voz: otoño ya 14,3 s de media (el segundo mejor tras el cielo).
+- Hoy: «¿Cómo se guardan las contraseñas?» (tecnología, tras naturaleza-animales-espacio), Instagram, CON voz. Gancho «NI GOOGLE SABE TU CONTRASEÑA». 17:00 (la hora con más valor hoy).
+- Siguiente: «¿Qué son las estrellas fugaces?» antes del pico de las Leónidas (~17-nov): mañana 14-nov en TikTok.
+- Publicaciones de noviembre: 13/20. Voz: quedan 1.790 (2-3 vídeos más con voz).
 
 ### 2026-11-11 (ejecución programada) — día de la Luna
 - Vídeo especial «¿Por qué la Luna tiene fases?» (espacio) en Instagram y TikTok, CON voz, 18:00. Gancho «NO ES LA SOMBRA DE LA TIERRA» (el error más común). Cierra anunciando la superluna del 24-nov (luna nueva 9-nov, cuarto creciente 17-nov).
