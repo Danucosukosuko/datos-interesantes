@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-13)
+## Vídeos y métricas (actualizado 2026-11-14)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -15,8 +15,8 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-05 | Nuclear 1: ¿por qué uranio? (cruzado) | física | sí | «ESTO DA LO QUE 1 TONELADA DE CARBÓN» | 142 | 125 | 3 | 1 | 0 | 2 | 9,6 | 41,9 % |
 | 2026-11-06 | Nuclear 2: ¿cómo funciona? (cruzado) | tecnología | sí | «LA NUCLEAR SOLO HIERVE AGUA» | 130 | 115 | 6 | 1 | 1 | 0 | 13,1 | **63,2 %** |
 | 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | 166 | 134 | 4 | 1 | 0 | 2 | 14,3 | 55,5 % |
-| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | **3** ⚠️ | 3 | 3 | 1 | 0 | 0 | 6,7 | 66,7 % |
-| 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | — (programado 17:00) | | | | | | | |
+| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | **4** ⚠️ | 3 | 3 | 1 | 0 | 0 | 5,6 | 50,0 % |
+| 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | **22** ⚠️ | 20 | 1 | 1 | 0 | 1 | 7,5 | 40,0 % |
 
 Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seguidores: 3.
 
@@ -28,7 +28,8 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-05 | Nuclear 1 (cruzado) | sí | **512** | 23 | 0 | 0 |
 | 2026-11-06 | Nuclear 2 (cruzado) | sí | 266 | 13 | 0 | 0 |
 | 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
-| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 243 | 6 | 0 | 0 | |
+| 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
+| 2026-11-14 | ¿Qué son las estrellas fugaces? | no | — (programado 18:00) | | | | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -42,6 +43,11 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 Noviembre: 7.710 / 9.500 (quedan 1.790).
 
 ## Conclusiones y decisiones
+
+### 2026-11-14 (ejecución programada)
+- ALERTA Instagram (2 reels seguidos): Luna 4 views y contraseñas 22 views a las ~18 h (antes ~115-165 el primer día). TikTok normal (~245 por vídeo). Instagram ha dejado de enseñar los reels desde el 11-nov. Se pide a Pablo que revise en la app el «Estado de la cuenta» (restricciones o contenido no recomendable) y la etiqueta de IA. Posible causa a vigilar: la cuenta publicó cruzado con la etiqueta de IA dos veces seguidas; si en el próximo reel (16-nov) sigue así, probar SIN voz (sin etiqueta de IA) para comparar.
+- Hoy: «¿Qué son las estrellas fugaces?» (espacio, Leónidas: pico la noche del 17 al 18), TikTok, SIN voz (en TikTok la voz no ha cambiado las views: GPS sin voz 309 vs gatos con voz 245; se guardan créditos para Instagram). 18:00.
+- Publicaciones de noviembre: 14/20. Voz: quedan 1.790.
 
 ### 2026-11-13 (ejecución programada)
 - ALERTA Instagram: la Luna (11-nov) solo tiene 3 views y 3 de alcance (alcance de la cuenta el 11-nov: 2). El resto de reels arrancan con ~115-165. Posibles causas: Metricool sin sincronizar del todo, o Instagram frenó el reel (¿algún aviso en la app?). En TikTok la misma Luna va normal (243). Revisar el 14-nov; si sigue igual, avisar a Pablo para que mire el reel en la app.
