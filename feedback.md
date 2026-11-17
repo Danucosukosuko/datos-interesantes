@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-16)
+## Vídeos y métricas (actualizado 2026-11-17)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -17,7 +17,7 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | 166 | 134 | 4 | 1 | 0 | 2 | 14,3 | 55,5 % |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | **7** ⚠️ | 3 | 3 | 1 | 0 | 0 | 13,0 | 60,0 % |
 | 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | **38** ⚠️ | 33 | 2 | 1 | 0 | 2 | 13,6 | 43,7 % |
-| 2026-11-16 | ¿Por qué existen las estaciones? | espacio | **no** (prueba sin etiqueta de IA) | «EN ENERO ESTAMOS MÁS CERCA DEL SOL» | — (programado 18:00) | | | | | | | |
+| 2026-11-16 | ¿Por qué existen las estaciones? | espacio | **no** (prueba sin etiqueta de IA) | «EN ENERO ESTAMOS MÁS CERCA DEL SOL» | **11** ⚠️ | 10 | 2 | 1 | 0 | 0 | 9,5 | 40,0 % |
 
 Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seguidores: 3.
 
@@ -30,7 +30,8 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-06 | Nuclear 2 (cruzado) | sí | 266 | 13 | 0 | 0 |
 | 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
-| 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 | |
+| 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 |
+| 2026-11-17 | ¿Cómo funciona un microondas? | no | — (programado 18:00) | | | | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -44,6 +45,12 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 Noviembre: 7.710 / 9.500 (quedan 1.790).
 
 ## Conclusiones y decisiones
+
+### 2026-11-17 (ejecución programada)
+- RESULTADO DE LA PRUEBA: estaciones (sin voz y SIN etiqueta de IA) también se queda en 11 views a las ~17 h. La etiqueta de IA NO es la causa: Instagram frena la cuenta entera desde el 11-nov (3 reels seguidos: 7, 38 y 11 views). Hay que revisarlo en la app (Configuración → Estado de la cuenta / «¿Puedes recomendar contenido?»). Mientras tanto, se sigue publicando y se ahorra la voz en Instagram.
+- TikTok estable en ~250-265 por vídeo.
+- Hoy: «¿Cómo funciona un microondas?» (tecnología, tras dos de espacio), TikTok, sin voz. Gancho «NACIÓ POR UN CHOCOLATE DERRETIDO». 18:00.
+- Publicaciones de noviembre: 16/20. Voz: quedan 1.790.
 
 ### 2026-11-16 (ejecución programada)
 - Instagram sigue frenado (Luna 7 views; contraseñas 38, aunque quien lo ve lo ve 13,6 s de media: el contenido gusta, el problema es que no se reparte). Alcance diario de la cuenta: 20 el 13-nov, 13 el 14-nov, 0 el 15-nov.
