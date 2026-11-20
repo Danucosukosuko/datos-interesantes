@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-19)
+## Vídeos y métricas (actualizado 2026-11-20)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -32,7 +32,8 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
 | 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 |
-| 2026-11-17 | ¿Cómo funciona un microondas? | no | 169 (~40 h) | 5 | 0 | 0 | |
+| 2026-11-17 | ¿Cómo funciona un microondas? | no | 169 (~40 h) | 5 | 0 | 0 |
+| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | — (programado 18:00) | | | | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -43,9 +44,14 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 - **Categorías (Instagram, t. medio):** física 12,4 s (2) · tecnología 9,8 s (4). naturaleza 13,4 s (1, otoño: 2 compartidos).
 
 ### Créditos de voz (ElevenLabs)
-Noviembre: 7.710 / 9.500 (quedan 1.790).
+Noviembre: 8.359 / 9.500 (quedan 1.141).
 
 ## Conclusiones y decisiones
+
+### 2026-11-20 (ejecución programada)
+- Sin datos nuevos de Instagram (bostezos aún sin sincronizar); TikTok sin cambios.
+- Hoy: «¿Cómo funciona una inteligencia artificial?» (tecnología, tema de mucho tirón), TikTok, CON voz (explicación paso a paso; los créditos de noviembre no se acumulan). Gancho «LA IA SOLO ADIVINA LA SIGUIENTE PALABRA». 18:00.
+- Publicaciones de noviembre: 18/20. Quedan 22-nov (Instagram) y 24-nov (TikTok).
 
 ### 2026-11-19 (ejecución programada)
 - Instagram sigue frenado (estaciones 16, contraseñas 40). TikTok: microondas 169 a las ~40 h (algo por debajo de los ~250 habituales); los demás estables.
