@@ -44,9 +44,13 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 - **Categorías (Instagram, t. medio):** física 12,4 s (2) · tecnología 9,8 s (4). naturaleza 13,4 s (1, otoño: 2 compartidos).
 
 ### Créditos de voz (ElevenLabs)
-Noviembre: 8.359 / 9.500 (quedan 1.141).
+Noviembre: 8.986 / 9.500 (quedan 514).
 
 ## Conclusiones y decisiones
+
+### 2026-11-21 (encargo de Pablo)
+- Pablo pidió el próximo vídeo sobre el medidor láser de distancia (el de los albañiles, no el nivel). Hecho y programado para el 22-nov a las 18:00 en Instagram (le tocaba por alternancia), CON voz. Gancho «MIDE CON LA VELOCIDAD DE LA LUZ». La ejecución automática del 22-nov verá que ya hay publicación ese día y solo hará feedback.
+- Publicaciones de noviembre: 19/20. Voz: quedan 514 (el 24-nov irá sin voz).
 
 ### 2026-11-20 (ejecución programada)
 - Sin datos nuevos de Instagram (bostezos aún sin sincronizar); TikTok sin cambios.
