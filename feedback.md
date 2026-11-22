@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-20)
+## Vídeos y métricas (actualizado 2026-11-22)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -17,8 +17,9 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-08 | ¿Por qué las hojas cambian de color en otoño? | naturaleza | sí | «LAS HOJAS YA ERAN AMARILLAS» | 166 | 134 | 4 | 1 | 0 | 2 | 14,3 | 55,5 % |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | espacio | sí | «NO ES LA SOMBRA DE LA TIERRA» | **7** ⚠️ | 3 | 3 | 1 | 0 | 0 | 13,0 | 60,0 % |
 | 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | **38** ⚠️ | 33 | 2 | 1 | 0 | 2 | 13,6 | 43,7 % |
-| 2026-11-16 | ¿Por qué existen las estaciones? | espacio | **no** (prueba sin etiqueta de IA) | «EN ENERO ESTAMOS MÁS CERCA DEL SOL» | **16** ⚠️ | 12 | 2 | 1 | 0 | 0 | 7,7 | 42,9 % |
-| 2026-11-19 | ¿Por qué bostezamos? | cuerpo humano | no | «BOSTEZAS ANTES DE NACER» | — (programado 18:00) | | | | | | | |
+| 2026-11-16 | ¿Por qué existen las estaciones? | espacio | **no** (prueba sin etiqueta de IA) | «EN ENERO ESTAMOS MÁS CERCA DEL SOL» | **16** ⚠️ | 12 | 2 | 1 | 0 | 0 | 7,3 | 42,9 % |
+| 2026-11-19 | ¿Por qué bostezamos? | cuerpo humano | no | «BOSTEZAS ANTES DE NACER» | 68 | 60 | 3 | 0 | 0 | 2 | 6,9 | 37,3 % |
+| 2026-11-22 | ¿Cómo funciona un medidor láser? (encargo de Pablo) | tecnología | sí | «MIDE CON LA VELOCIDAD DE LA LUZ» | — (programado 18:00) | | | | | | | |
 
 Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seguidores: 3.
 
@@ -32,8 +33,8 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
 | 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 |
-| 2026-11-17 | ¿Cómo funciona un microondas? | no | 169 (~40 h) | 5 | 0 | 0 |
-| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | — (programado 18:00) | | | | |
+| 2026-11-17 | ¿Cómo funciona un microondas? | no | 204 | 7 | 0 | 0 |
+| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | **290** (~40 h) | 5 | 1 | 0 | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -47,6 +48,11 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 Noviembre: 8.986 / 9.500 (quedan 514).
 
 ## Conclusiones y decisiones
+
+### 2026-11-22 (ejecución programada: hoy ya estaba el medidor láser → solo feedback)
+- Instagram empieza a recuperarse un poco: bostezos 68 views (2 compartidos) frente a 7-40 de los anteriores; alcance diario 39 el 19-nov y 22 el 20-nov. Aún lejos de los ~150 de antes del 11-nov.
+- TikTok: la IA va por 290 a las ~40 h (mejor arranque desde el GPS y con el primer comentario en semanas); microondas 204.
+- Publicaciones de noviembre: 19/20 (queda el 24-nov en TikTok, sin voz: quedan 514 créditos).
 
 ### 2026-11-21 (encargo de Pablo)
 - Pablo pidió el próximo vídeo sobre el medidor láser de distancia (el de los albañiles, no el nivel). Hecho y programado para el 22-nov a las 18:00 en Instagram (le tocaba por alternancia), CON voz. Gancho «MIDE CON LA VELOCIDAD DE LA LUZ». La ejecución automática del 22-nov verá que ya hay publicación ese día y solo hará feedback.
