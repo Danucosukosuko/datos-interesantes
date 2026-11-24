@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-22)
+## Vídeos y métricas (actualizado 2026-11-24)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -19,7 +19,7 @@ Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 | 2026-11-13 | ¿Cómo se guardan las contraseñas? | tecnología | sí | «NI GOOGLE SABE TU CONTRASEÑA» | **38** ⚠️ | 33 | 2 | 1 | 0 | 2 | 13,6 | 43,7 % |
 | 2026-11-16 | ¿Por qué existen las estaciones? | espacio | **no** (prueba sin etiqueta de IA) | «EN ENERO ESTAMOS MÁS CERCA DEL SOL» | **16** ⚠️ | 12 | 2 | 1 | 0 | 0 | 7,3 | 42,9 % |
 | 2026-11-19 | ¿Por qué bostezamos? | cuerpo humano | no | «BOSTEZAS ANTES DE NACER» | 68 | 60 | 3 | 0 | 0 | 2 | 6,9 | 37,3 % |
-| 2026-11-22 | ¿Cómo funciona un medidor láser? (encargo de Pablo) | tecnología | sí | «MIDE CON LA VELOCIDAD DE LA LUZ» | — (programado 18:00) | | | | | | | |
+| 2026-11-22 | ¿Cómo funciona un medidor láser? (encargo de Pablo) | tecnología | sí | «MIDE CON LA VELOCIDAD DE LA LUZ» | **287** | 264 | 14 | 2 | 0 | 0 | 14,1 | 57,6 % |
 
 Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seguidores: 3.
 
@@ -33,8 +33,9 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-10 | ¿Por qué los gatos caen de pie? | sí | 245 | 5 | 0 | 0 |
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
 | 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 |
-| 2026-11-17 | ¿Cómo funciona un microondas? | no | 204 | 7 | 0 | 0 |
-| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | **290** (~40 h) | 5 | 1 | 0 | |
+| 2026-11-17 | ¿Cómo funciona un microondas? | no | 205 | 8 | 0 | 0 |
+| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | **292** | 5 | 1 | 0 |
+| 2026-11-24 | ¿Qué es una superluna? | no | — (programado 18:00) | | | | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -48,6 +49,13 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 Noviembre: 8.986 / 9.500 (quedan 514).
 
 ## Conclusiones y decisiones
+
+### 2026-11-24 (ejecución programada)
+- ¡Instagram vuelve! El medidor láser (encargo de Pablo, con voz) lleva 287 views y 264 de alcance: el reel con más views de la cuenta, con 14 likes, 2 comentarios, 14,1 s de media y 57,6 % de view rate. El frenazo del 11 al 19-nov parece haber pasado. Temas prácticos y cotidianos (herramientas, GPS, IA) funcionan muy bien.
+- TikTok: IA 292, microondas 205.
+- Hoy: «¿Qué es una superluna?» (espacio, tendencia: hay superluna esta noche), TikTok, sin voz (quedan 514 créditos). Gancho «HOY LA LUNA ESTÁ 40.000 KM MÁS CERCA». 18:00.
+- Publicaciones de noviembre: 20/20. Las ejecuciones del 26 y el 28-nov solo harán feedback.
+- Para diciembre: más temas prácticos de «cómo funciona X que usas a diario» y la superluna del 24-dic (Nochebuena).
 
 ### 2026-11-22 (ejecución programada: hoy ya estaba el medidor láser → solo feedback)
 - Instagram empieza a recuperarse un poco: bostezos 68 views (2 compartidos) frente a 7-40 de los anteriores; alcance diario 39 el 19-nov y 22 el 20-nov. Aún lejos de los ~150 de antes del 11-nov.
