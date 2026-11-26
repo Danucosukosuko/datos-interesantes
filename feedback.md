@@ -3,7 +3,7 @@
 Fuente: Metricool (Instagram Reels, @explica.exe). Métricas tomadas en cada ejecución programada.
 Redes enlazadas: solo Instagram (sin TikTok ni YouTube).
 
-## Vídeos y métricas (actualizado 2026-11-24)
+## Vídeos y métricas (actualizado 2026-11-26)
 
 ### Instagram
 | Fecha | Tema | Categoría | Voz | Gancho (fotograma 0) | Views | Alcance | Likes | Coment. | Guard. | Compart. | T. medio (s) | View rate (>3 s) |
@@ -34,8 +34,8 @@ Media Instagram (7): 166 views · 141 alcance · 11,0 s · 43,8 % view rate. Seg
 | 2026-11-11 | ¿Por qué la Luna tiene fases? (cruzado) | sí | 247 | 6 | 0 | 0 |
 | 2026-11-14 | ¿Qué son las estrellas fugaces? | no | 264 | 4 | 0 | 0 |
 | 2026-11-17 | ¿Cómo funciona un microondas? | no | 205 | 8 | 0 | 0 |
-| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | **292** | 5 | 1 | 0 |
-| 2026-11-24 | ¿Qué es una superluna? | no | — (programado 18:00) | | | | |
+| 2026-11-20 | ¿Cómo funciona una inteligencia artificial? | sí | **294** | 6 | 1 | 0 |
+| 2026-11-24 | ¿Qué es una superluna? | no | 271 (~40 h) | 6 | 0 | 0 | |
 
 Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacías).
 
@@ -49,6 +49,11 @@ Metricool no da aún tiempo medio ni % visto completo de TikTok (columnas vacía
 Noviembre: 8.986 / 9.500 (quedan 514).
 
 ## Conclusiones y decisiones
+
+### 2026-11-26 (ejecución programada: noviembre ya tiene 20/20 → solo feedback)
+- TikTok: superluna 271 a las ~40 h (tema de actualidad, buen arranque sin voz); IA 294.
+- Instagram: el medidor láser se mantiene en 287 (alcance diario de la cuenta 230 el 22-nov). Seguidores de Instagram: 3, sin cambios.
+- No se programa nada hasta diciembre (límite de 20 publicaciones de Metricool).
 
 ### 2026-11-24 (ejecución programada)
 - ¡Instagram vuelve! El medidor láser (encargo de Pablo, con voz) lleva 287 views y 264 de alcance: el reel con más views de la cuenta, con 14 likes, 2 comentarios, 14,1 s de media y 57,6 % de view rate. El frenazo del 11 al 19-nov parece haber pasado. Temas prácticos y cotidianos (herramientas, GPS, IA) funcionan muy bien.
