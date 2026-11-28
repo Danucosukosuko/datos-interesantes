@@ -50,6 +50,10 @@ Noviembre: 8.986 / 9.500 (quedan 514).
 
 ## Conclusiones y decisiones
 
+### 2026-11-28 (ejecución programada: noviembre 20/20 → solo feedback)
+- Sin cambios desde el 26-nov (Metricool no ha actualizado las cifras): superluna 271, IA 294 en TikTok; medidor láser 287 en Instagram.
+- Pablo (26-nov): por ahora NO aplicar los cambios propuestos para crecer en TikTok; diciembre sigue con las mismas reglas.
+
 ### 2026-11-26 (ejecución programada: noviembre ya tiene 20/20 → solo feedback)
 - TikTok: superluna 271 a las ~40 h (tema de actualidad, buen arranque sin voz); IA 294.
 - Instagram: el medidor láser se mantiene en 287 (alcance diario de la cuenta 230 el 22-nov). Seguidores de Instagram: 3, sin cambios.
